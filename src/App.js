@@ -1,6 +1,6 @@
 import React from 'react';
 import { BrowserRouter as Router, Route } from "react-router-dom";
-import NavTabs from "./components/Navbar";
+import Navbar from "./components/Navbar";
 import Home from "./pages/Home";
 import Contact from "./pages/Contact";
 import Careers from "./pages/Careers";
@@ -18,7 +18,7 @@ function App() {
       <Router>
         <div className="App">
           <ClientContextProvider>
-            <NavTabs />
+            <Navbar />
             <Route exact path="/" render={() => <Home />} />
             <Route exact path="/Contact" component={Contact} />
             <Route exact path="/Shop-Local" component={ShopInStore} />

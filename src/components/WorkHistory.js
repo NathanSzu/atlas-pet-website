@@ -1,5 +1,4 @@
 import React, { useState } from 'react'
-import './workhistory.css'
 
 export default function WorkHistory({ historyItem, db, currentUser, position }) {
     const [workHistory, setWorkHistory] = useState({

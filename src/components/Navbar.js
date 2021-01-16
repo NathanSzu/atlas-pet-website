@@ -1,8 +1,7 @@
 import React from "react"
 import { Link, useLocation } from "react-router-dom"
-import "../../pages/style.css"
-import logo from "../../pages/assets/logo.png"
-import "./navbar.css"
+import "../pages/style.css"
+import logo from "../pages/assets/logo.png"
 
 function NavTabs() {
 

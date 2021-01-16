@@ -1,0 +1,31 @@
+{
+  "files": {
+    "main.css": "/static/css/main.9e19918a.chunk.css",
+    "main.js": "/static/js/main.c7369854.chunk.js",
+    "main.js.map": "/static/js/main.c7369854.chunk.js.map",
+    "runtime-main.js": "/static/js/runtime-main.8914c3f3.js",
+    "runtime-main.js.map": "/static/js/runtime-main.8914c3f3.js.map",
+    "static/js/2.67faa816.chunk.js": "/static/js/2.67faa816.chunk.js",
+    "static/js/2.67faa816.chunk.js.map": "/static/js/2.67faa816.chunk.js.map",
+    "index.html": "/index.html",
+    "precache-manifest.287c959c610b623af12b76189904fcf6.js": "/precache-manifest.287c959c610b623af12b76189904fcf6.js",
+    "service-worker.js": "/service-worker.js",
+    "static/css/main.9e19918a.chunk.css.map": "/static/css/main.9e19918a.chunk.css.map",
+    "static/js/2.67faa816.chunk.js.LICENSE.txt": "/static/js/2.67faa816.chunk.js.LICENSE.txt",
+    "static/media/aquatics.jpg": "/static/media/aquatics.3bb76d77.jpg",
+    "static/media/background.css": "/static/media/background-image.d127c53e.jpg",
+    "static/media/bird.jpg": "/static/media/bird.bc4f0602.jpg",
+    "static/media/cat.jpg": "/static/media/cat.46568aa0.jpg",
+    "static/media/dog.jpg": "/static/media/dog.6de96763.jpg",
+    "static/media/dogEating.mp4": "/static/media/dogEating.f8cf9494.mp4",
+    "static/media/logo.png": "/static/media/logo.7fd0a02e.png",
+    "static/media/mammal.jpg": "/static/media/mammal.9f1af825.jpg",
+    "static/media/reptile.jpg": "/static/media/reptile.d5e2ec9a.jpg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.8914c3f3.js",
+    "static/js/2.67faa816.chunk.js",
+    "static/css/main.9e19918a.chunk.css",
+    "static/js/main.c7369854.chunk.js"
+  ]
+}
