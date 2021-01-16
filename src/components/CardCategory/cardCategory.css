@@ -1,0 +1,33 @@
+.card {
+    border-style: unset;
+    background-color: unset;
+}
+
+.card-anim:hover {
+    animation-name: cardHover;
+    animation-duration: .5s;
+    position: relative;
+}
+
+.card-img-top {
+    border-radius: 10px;
+    background-color: unset;
+}
+
+@media only screen and (max-width:800px) {
+    .card {
+        margin-bottom: 25px;
+        position: relative;
+        display: inline-flex;
+        text-align: center;
+    }
+    .card-anim:hover {
+        animation-name: unset;
+    }
+  }
+
+@keyframes cardHover {
+    0% {top: 0px}
+    25% {top: -20px}
+    100% {top: 0px}
+}

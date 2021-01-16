@@ -1,0 +1,49 @@
+.jumbotron {
+    position: relative;
+    padding-top: 10px;
+    background-color: unset;
+    text-align: center;
+    z-index: 0;
+    margin-bottom: 0px;
+    padding-bottom: 10px;
+}
+
+.top-row {
+    padding: 40px;
+    border-radius: 15px;
+    margin: 20px;
+}
+
+.wrapper {
+    position: relative;
+    max-width: 750px;
+    margin: 0 auto;
+}
+
+.main-txt {
+    position: relative;
+    color: lightgray;
+    z-index: 1;
+}
+
+.lead {
+    font-weight: 500;
+}
+
+@media only screen and (max-width:800px) {
+    .jumbotron {
+        padding-top: 25px;
+    }
+    .top-row {
+        margin-top: 0px;
+        padding: 5px;
+    }
+  }
+  @media only screen and (min-width:1441px) {
+    .jumbotron {
+        padding-top: 6vh;
+    }
+    .top-row {
+        margin-bottom: 10vh;
+    }
+  }

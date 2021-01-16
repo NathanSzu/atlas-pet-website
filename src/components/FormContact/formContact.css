@@ -1,0 +1,37 @@
+.jumbotron {
+    background-color: unset;
+    text-align: center;
+    padding: 0px;
+    margin: 25px;
+    margin-left: 5px;
+    /* margin-bottom: 0px; */
+}
+
+.main-txt {
+    position: relative;
+    color: lightgray;
+    z-index: 1;
+}
+
+.lead {
+    font-weight: 500;
+    margin: 0px;
+}
+
+@media only screen and (max-width:800px) {
+    .jumbotron {
+        padding-top: 25px;
+    }
+    .top-row {
+        margin-top: 0px;
+        padding: 5px;
+    }
+  }
+  @media only screen and (min-width:1441px) {
+    .jumbotron {
+        padding-top: 6vh;
+    }
+    .top-row {
+        margin-bottom: 10vh;
+    }
+  }

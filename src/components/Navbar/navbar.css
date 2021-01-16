@@ -1,0 +1,118 @@
+.logo {
+    width: 190px;
+    padding: 8px;
+}
+
+.nav-link {
+    display: inline-block;
+    height: 100%;
+}
+
+.active-link {
+    background-color: rgb(95, 95, 95);
+    padding: 15px;
+    color: lightgray;
+}
+
+.active-link:hover {
+    background-color: rgb(95, 95, 95);
+    padding: 15px;
+    border-width: 0px;
+    color: lightgray;
+}
+
+.inactive-link {
+    background-color: rgb(24, 24, 24);
+    padding: 15px;
+    color: lightgray;
+}
+
+.inactive-link:hover {
+    background-color: rgb(95, 95, 95);
+    padding: 15px;
+    border-width: 0px;
+    color: lightgray;
+}
+
+.nav-background {
+    background-color: rgb(24, 24, 24);
+    padding: 0px;
+}
+
+.dropdown {
+    position: absolute;
+    display: none;
+    left: 0px;
+    background-color: rgb(95, 95, 95);
+    width: 100%;
+    margin: 0px;
+    z-index: 10;
+}
+
+.d-down {
+    position: relative;
+}
+
+.d-down:hover > .dropdown {
+    display: block;
+    animation-name: dd;
+    animation-duration: .25s;
+}
+
+.links {
+    text-align: right;
+}
+
+@keyframes dd {
+    0% {
+        opacity: 0%;
+    }
+    100% {
+        opacity: 100%;
+    }
+}
+
+.dropdown-link {
+    color: lightgray;
+    display: block;
+    padding: 15px;
+}
+
+@media only screen and (max-width:800px) {
+    .nav-links {
+        position: relative;
+        display: inline-flex;
+        text-align: center;
+    }
+
+    .links {
+        text-align: center;
+    }
+
+    .nav-background {
+        text-align: center;
+    }
+  }
+
+  @media only screen and (min-width:1000px) {
+    .link-wrapper {
+        min-width: 1000px;
+    }
+
+    .nav {
+        padding: 7px;
+    }
+
+    .logo {
+        width: 250px;
+        padding: 8px;
+    }
+
+    .nav-link {
+        padding: 20px;
+    }
+
+    .nav-link:hover {
+        padding: 20px;
+    }
+  }
