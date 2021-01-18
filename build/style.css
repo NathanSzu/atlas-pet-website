@@ -852,11 +852,3 @@ pre {
 .section-title {
     margin: 0 auto;
 }
-
-/* Background */
-
-.bg-image {
-    background-image: url("../utils/Assets/background-image.jpg");
-    background-position: center;
-    background-size: cover;
-}
