@@ -856,7 +856,7 @@ pre {
 /* Background */
 
 .bg-image {
-    background-image: url("../utils/Assets/background-image.jpg");
+    background-image: url("./background-image.jpg");
     background-position: center;
     background-size: cover;
 }

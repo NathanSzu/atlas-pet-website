@@ -1,6 +1,6 @@
 import React from "react";
 
-function Background({ src }) {
+function Background() {
     return (
         <div>
             <div className="video-container bg-image">
