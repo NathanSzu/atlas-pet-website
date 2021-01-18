@@ -1,11 +1,10 @@
 import React, { useContext, useEffect, useState } from 'react';
 import { useHistory } from "react-router-dom";
-import CardSingle from '../components/CardSingle';
+import CardSingle from '../components/SingleCard';
 import websiteData from "../utils/SiteData";
 import { ClientContext } from "../utils/ClientContext";
-import Background from '../components/Background';
-import CategoryJumbotron from '../components/CategoryJumbotron';
-import "./style.css"
+import Background from '../components/Background.js';
+import CategoryJumbotron from '../components/CategoryJumbotron.js';
 import CategoryNav from "../components/CategoryNav"
 
 export default function ShopByCategory() {

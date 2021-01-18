@@ -1,5 +1,4 @@
 import React from "react";
-import "./cardSingle.css";
 
 function SingleCard({ src, alt }) {
 

@@ -1,9 +1,8 @@
 import React, { useState, useEffect, useContext } from 'react';
-import Background from '../components/Background';
-import "./style.css";
+import Background from '../components/Background.js';
 import jobData from "../utils/JobListings";
-import JobCard from '../components/CardJob';
-import FormSignup from '../components/FormSignup';
+import JobCard from '../components/CardJob.js';
+import FormSignup from '../components/FormSignup.js';
 import FormLogin from '../components/FormLogin.js';
 import { AuthContext } from '../utils/AuthContext';
 import { Redirect } from 'react-router-dom';

@@ -1,7 +1,6 @@
 import React from 'react';
-import Background from '../components/Background';
-import FormContact from '../components/FormContact';
-import "./style.css"
+import Background from '../components/Background.js';
+import FormContact from '../components/FormContact.js';
 
 export default function index() {
     return (

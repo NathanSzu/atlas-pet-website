@@ -1,17 +1,16 @@
 import React, { useContext } from "react";
 import { Link } from "react-router-dom"
-import "./cardCategory.css";
-import { ClientContext } from "../../utils/ClientContext";
+import { ClientContext } from "../utils/ClientContext";
 
 
 function CategoryCard({ src, alt }) {
     const context = useContext(ClientContext)
 
     return (
-        <div className="card card-anim">
+        <div className="card-anim">
 
             <Link to="/Shop-Category" >
-                <img className="card-img-top"
+                <img className="img-top"
                     onClick={(e) => {
                         context.changeCategory(e.target.alt)
                     }}

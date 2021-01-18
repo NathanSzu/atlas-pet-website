@@ -10,6 +10,7 @@ import ClientContextProvider from './utils/ClientContext';
 import User from './pages/User'
 import SecuredRoute from './pages/SecuredRoute'
 import { AuthProvider } from './utils/AuthContext';
+// import "../src/pages/style.css"
 
 
 function App() {

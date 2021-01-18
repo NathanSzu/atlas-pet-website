@@ -1,5 +1,4 @@
 import React from "react";
-import "../../pages/style.css"
 
 function HomeJumbotron() {
 

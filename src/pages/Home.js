@@ -1,10 +1,9 @@
 import React from 'react'
 import dogvid from './assets/dogEating.mp4'
-import HomeJumbotron from '../components/HomeJumbotron'
+import HomeJumbotron from '../components/HomeJumbotron.js'
 import BackgroundVid from '../components/BackgroundVid'
-import CardCategory from "../components/CardCategory";
+import CardCategory from "../components/CategoryCard";
 import websiteData from "../utils/SiteData";
-import "./style.css"
 
 export default function Home() {
     

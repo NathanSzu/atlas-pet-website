@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import { withRouter } from 'react-router';
-import fbApp from '../../utils/firebase';
-import "./formSignup.css";
+import fbApp from '../utils/firebase';
 
 function FormSignup({ toggleForm, history }) {
 

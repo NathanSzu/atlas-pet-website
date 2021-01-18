@@ -1,10 +1,9 @@
 import React, { useState, useEffect, useContext } from 'react';
-import Background from '../components/Background';
-import "./style.css";
+import Background from '../components/Background.js';
 import jobData from "../utils/JobListings"
-import JobCard from '../components/CardJob';
+import JobCard from '../components/CardJob.js';
 import app from '../utils/firebase';
-import Application from '../components/Application'
+import Application from '../components/Application.js'
 import { AuthContext } from '../utils/AuthContext';
 import firebase from 'firebase/app';
 import trash from "../utils/Assets/trash.png";

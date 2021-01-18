@@ -1,5 +1,4 @@
 import React from "react";
-import "./categoryJumbotron.css";
 import { v4 as uuidv4 } from 'uuid';
 
 function CategoryJumbotron({ title, description, shopOnlineURL }) {

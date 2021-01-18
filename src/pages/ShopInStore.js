@@ -1,8 +1,7 @@
 import React from 'react';
-import Background from '../components/Background';
-import CardCategory from '../components/CardCategory';
+import Background from '../components/Background.js';
+import CardCategory from '../components/CategoryCard';
 import websiteData from "../utils/SiteData"
-import "./style.css"
 
 export default function ShopInStore() {
     // Shortened for ease of use

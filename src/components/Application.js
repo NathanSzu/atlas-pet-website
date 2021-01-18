@@ -1,9 +1,8 @@
 import React, { useState, useEffect } from 'react'
-import WorkHistory from '../WorkHistory'
-import AppQuestion from '../AppQuestion.js'
-import ApplicationContent from '../../utils/ApplicationContent'
-import "./application.css"
-import app from '../../utils/firebase';
+import WorkHistory from './WorkHistory'
+import AppQuestion from './AppQuestion.js'
+import ApplicationContent from '../utils/ApplicationContent'
+import app from '../utils/firebase';
 // Importing firebase SDK
 import firebase from 'firebase/app';
 // Importing firestore database
