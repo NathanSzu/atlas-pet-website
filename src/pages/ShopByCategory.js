@@ -48,7 +48,7 @@ export default function ShopByCategory() {
 
     return (
         <main className="hide-overflow top">
-            <CategoryNav toggleCategory={toggleCategory} />
+            <CategoryNav toggleCategory={toggleCategory} category={category} />
             <Background />
             <div className="row category-height">
                 <CardSingle src={link} alt={category} />

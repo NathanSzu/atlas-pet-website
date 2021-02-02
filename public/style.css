@@ -311,21 +311,25 @@ pre {
 }
 
 .category-nav-btn:hover {
-    background-color: rgb(41, 41, 41);
+    background-color: rgb(70, 70, 70);
     color: white;
     font-weight: bold;
 }
 
 .category-nav-btn:focus {
     outline: none;
-    background-color: rgb(41, 41, 41);
-    color: white;
-    font-weight: bold;
 }
 
 .category-nav {
    position: relative;
    z-index: 1;
+}
+
+.current-category {
+    outline: none;
+    background-color: rgb(41, 41, 41);
+    color: white;
+    font-weight: bold;
 }
 
 .vertical-center {
