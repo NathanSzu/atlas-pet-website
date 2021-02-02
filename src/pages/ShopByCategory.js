@@ -7,7 +7,7 @@ import Background from '../components/Background.js';
 import CategoryJumbotron from '../components/CategoryJumbotron.js';
 import CategoryNav from "../components/CategoryNav"
 
-export default function ShopByCategory() {
+export default function ShopByCategory({ Helmet }) {
     let history = useHistory();
     const [link, setLink] = useState(null);
     const [category, setCategory] = useState("Local Category Unset");
@@ -48,6 +48,10 @@ export default function ShopByCategory() {
 
     return (
         <main className="hide-overflow top">
+            <Helmet>
+                <title>{category} | Atlas Pet</title>
+            </Helmet>
+
             <CategoryNav toggleCategory={toggleCategory} category={category} />
             <Background />
             <div className="row category-height">

@@ -4,13 +4,17 @@ import BackgroundVid from '../components/BackgroundVid'
 import CardCategory from "../components/CategoryCard";
 import websiteData from "../utils/SiteData";
 
-export default function Home() {
+export default function Home({ Helmet }) {
 
     // Shortened for ease of use
     const dataset = websiteData.petCategories
 
     return (
         <main className="hide-overflow">
+            <Helmet>
+                <title>Home | Atlas Pet</title>
+            </Helmet>
+
             <BackgroundVid src={dogvid} />
             <div className="jumbotron">
                 <div className="wrapper">

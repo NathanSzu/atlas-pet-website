@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import Background from '../components/Background.js';
 import axios from "axios";
 
-export default function Contact() {
+export default function Contact({ Helmet }) {
 
     const [formData, setFormData] = useState({
         name: "",
@@ -36,6 +36,10 @@ export default function Contact() {
 
     return (
         <main className="hide-overflow">
+            <Helmet>
+                <title>Contact | Atlas Pet</title>
+            </Helmet>
+
             <Background />
             <div className="row">
                 <div className="col-lg-7 contact-form">

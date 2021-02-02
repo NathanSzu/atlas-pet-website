@@ -10,7 +10,7 @@ import ClientContextProvider from './utils/ClientContext';
 import User from './pages/User'
 import SecuredRoute from './pages/SecuredRoute'
 import { AuthProvider } from './utils/AuthContext';
-// import "../src/pages/style.css"
+import { Helmet } from 'react-helmet'
 
 
 function App() {
@@ -20,12 +20,12 @@ function App() {
         <div className="App">
           <ClientContextProvider>
             <Navbar />
-            <Route exact path="/" render={() => <Home />} />
-            <Route exact path="/Contact" component={Contact} />
-            <Route exact path="/Shop-Local" component={ShopInStore} />
-            <Route exact path="/Careers" component={Careers} />
-            <Route exact path="/Shop-Category" component={ShopByCategory} />
-            <SecuredRoute exact path="/User-Page" component={User} />
+            <Route exact path="/" render={() => <Home Helmet={Helmet} />} />
+            <Route exact path="/Contact" render={() => <Contact Helmet={Helmet} />} />
+            <Route exact path="/Shop-Local" render={() => <ShopInStore Helmet={Helmet} />} />
+            <Route exact path="/Careers" render={() => <Careers Helmet={Helmet} />} />
+            <Route exact path="/Shop-Category" render={() => <ShopByCategory Helmet={Helmet} />} />
+            <SecuredRoute exact path="/User-Page" render={() => <User Helmet={Helmet} />}/>
           </ClientContextProvider>
         </div>
       </Router>

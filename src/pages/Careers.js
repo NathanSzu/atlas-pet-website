@@ -7,7 +7,7 @@ import FormLogin from '../components/FormLogin.js';
 import { AuthContext } from '../utils/AuthContext';
 import { Redirect } from 'react-router-dom';
 
-export default function Careers() {
+export default function Careers({ Helmet }) {
     let currentPositions = [];
     let currentPositionsBlaine = [];
     let currentPositionsStillwater = [];
@@ -62,6 +62,10 @@ export default function Careers() {
 
     return (currentUser ? <Redirect to="User-Page" /> :
         <main className="hide-overflow">
+            <Helmet>
+                <title>Careers | Atlas Pet</title>
+            </Helmet>
+
             <Background />
             <div className="row">
                 <div className="col-md-6 job-section">
