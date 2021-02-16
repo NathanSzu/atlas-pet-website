@@ -1,9 +1,9 @@
 import React, { useState, useEffect, useContext } from 'react';
-import Background from '../components/Background.js';
+import Background from '../components/Background';
 import jobData from "../utils/JobListings"
-import JobCard from '../components/CardJob.js';
+import JobCard from '../components/CardJob';
 import app from '../utils/firebase';
-import Application from '../components/Application.js'
+import Application from '../components/Application'
 import { AuthContext } from '../utils/AuthContext';
 import firebase from 'firebase/app';
 import trash from "../utils/Assets/trash.png";
@@ -37,12 +37,12 @@ export default function User() {
                 let hAdd = [];
                 setFullApp(applications[i])
                 console.log(applications[i].Questions)
-                for (const [key, value] of Object.entries(applications[i].Questions)) {
+                for (const [value] of Object.entries(applications[i].Questions)) {
                     qAdd.push(value);
                     console.log(`${value.question}: ${value.response}`);
                 }
                 setQuestions(qAdd)
-                for (const [key, value] of Object.entries(applications[i].Experience)) {
+                for (const [value] of Object.entries(applications[i].Experience)) {
                     hAdd.push(value);
                 }
                 setWorkHistory(hAdd)

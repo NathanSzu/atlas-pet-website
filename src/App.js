@@ -25,7 +25,7 @@ function App() {
             <Route exact path="/Shop-Local" render={() => <ShopInStore Helmet={Helmet} />} />
             <Route exact path="/Careers" render={() => <Careers Helmet={Helmet} />} />
             <Route exact path="/Shop-Category" render={() => <ShopByCategory Helmet={Helmet} />} />
-            <SecuredRoute exact path="/User-Page" render={() => <User Helmet={Helmet} />}/>
+            <SecuredRoute exact path="/User-Page" component={User} />
           </ClientContextProvider>
         </div>
       </Router>

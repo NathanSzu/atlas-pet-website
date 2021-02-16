@@ -3,9 +3,9 @@ import background from "../utils/Assets/background-image.jpg"
 
 function Background() {
     return (
-        <div>
+        <div className='hide-on-small'>
             <div className="video-container bg-image">
-                <img className="w-100" src={background} />
+                <img className="image-backer" src={background} />
             </div>
         </div>
     )

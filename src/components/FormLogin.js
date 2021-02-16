@@ -37,7 +37,7 @@ function FormLogin({ toggleForm }) {
     };
 
     return (
-        <div className="jumbotron form-spacing">
+        <div className="jumbotron form-spacing ">
             <form className="form">
                 <h1 className="display-4 main-txt signup-login"><strong>Login</strong></h1>
 
