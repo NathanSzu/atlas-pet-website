@@ -68,7 +68,7 @@ export default function Careers({ Helmet }) {
 
             <Background />
             <div className="row">
-                <div className="col-md-6 job-section">
+                <div className="col-md-6 job-section hide-on-small">
                     <div className="job-section-overlay"></div>
 
                     <div className="row">

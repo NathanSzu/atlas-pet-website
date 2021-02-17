@@ -386,12 +386,6 @@ pre {
     }
 }
 
-@media only screen and (max-width:950px) {
-    .job-section {
-        display: none;
-    }
-  }
-
   /* Work History */
 
 .history-row {
@@ -792,10 +786,16 @@ pre {
         margin-top: 0px;
     }
   }
-  @media only screen and (min-width:1441px) {
-    .jumbotron {
-        /* padding-top: 6vh; */
+
+  @media only screen and (max-width:900px) {
+    .top-row {
+        margin-bottom: 10vh;
     }
+    .small-app {
+        padding: 30px;
+    }
+  }
+  @media only screen and (min-width:1441px) {
     .top-row {
         margin-bottom: 10vh;
     }

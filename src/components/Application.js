@@ -83,7 +83,7 @@ export default function Application({ position, setApply, currentUser }) {
     }
 
     return (
-        <main className="application-form-wrapper">
+        <main className="application-form-wrapper small-app">
             <form className="application-form">
                 <h1 className="app-title">{position}</h1>
 
