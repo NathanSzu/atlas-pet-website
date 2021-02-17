@@ -1,3 +1,7 @@
+body {
+    background-image: linear-gradient(to bottom right, rgb(75, 75, 75), rgb(144, 144, 144));
+}
+
 .hr {
     position: relative;
     background-color: lightgray;
@@ -104,6 +108,17 @@ label {
     margin: 0 auto;
     animation-name: swoop-in;
     animation-duration: 1s;
+}
+
+.home-categories {
+    margin: 10px;
+    margin-left: 0px;
+    margin-right: 0px;
+}
+
+.image-backer {
+    width: 100%;
+    object-fit: cover;
 }
 
 /* Contact Us Page */
@@ -395,24 +410,26 @@ pre {
 
 .jumbotron {
     position: relative;
-    padding-top: 10px;
+    padding-top: 50px;
+    padding-bottom: 50px;
     background-color: unset;
     text-align: center;
     z-index: 0;
     margin-bottom: 0px;
-    padding-bottom: 10px;
+    /* padding-bottom: 10px; */
 }
 
 .top-row {
-    padding: 40px;
-    border-radius: 15px;
-    margin: 20px;
+    /* padding: 400px; */
+    /* border-radius: 15px; */
+    /* margin: 20px; */
 }
 
 .wrapper {
     position: relative;
     max-width: 750px;
     margin: 0 auto;
+    padding: 25px;
 }
 
 .main-txt {
@@ -427,16 +444,23 @@ pre {
 
 @media only screen and (max-width:800px) {
     .jumbotron {
-        padding-top: 25px;
+        /* padding-top: 25px; */
     }
     .top-row {
         margin-top: 0px;
         padding: 5px;
     }
+    .header-size-small {
+        font-size: 14vw;
+        margin: 10px;
+    }
+    .text-size-small {
+        font-size: 5vw;
+    }
   }
   @media only screen and (min-width:1441px) {
     .jumbotron {
-        padding-top: 6vh;
+        /* padding-top: 6vh; */
     }
     .top-row {
         margin-bottom: 10vh;
@@ -735,21 +759,6 @@ pre {
 
 /* Contact Form */
 
-.jumbotron {
-    background-color: unset;
-    text-align: center;
-    padding: 0px;
-    margin: 25px;
-    margin-left: 5px;
-    /* margin-bottom: 0px; */
-}
-
-.main-txt {
-    position: relative;
-    color: lightgray;
-    z-index: 1;
-}
-
 .lead {
     font-weight: 500;
     margin: 0px;
@@ -757,16 +766,31 @@ pre {
 
 @media only screen and (max-width:800px) {
     .jumbotron {
-        padding-top: 25px;
+        padding: 0px;
     }
     .top-row {
         margin-top: 0px;
         padding: 5px;
     }
+    .hide-on-small {
+        display: none;
+    }
+    .row-overlay {
+        border-radius: 0px;
+    }
+    .wrapper {
+        padding-top: 0px;
+    }
+    .form-wrapper {
+        width: 100%;
+    }
+    .form-spacing {
+        margin-top: 0px;
+    }
   }
   @media only screen and (min-width:1441px) {
     .jumbotron {
-        padding-top: 6vh;
+        /* padding-top: 6vh; */
     }
     .top-row {
         margin-bottom: 10vh;
@@ -850,7 +874,7 @@ pre {
     width: 100%;
     height: 1px;
     background-color: lightgray;
-    margin: 0 auto;
+    margin: 10px auto;
 }
 
 .section-title {

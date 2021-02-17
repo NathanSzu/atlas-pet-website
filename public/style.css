@@ -1,5 +1,9 @@
 body {
+    position: relative;
     background-image: linear-gradient(to bottom right, rgb(75, 75, 75), rgb(144, 144, 144));
+    top: 0;
+    bottom: -69px;
+   
 }
 
 .hr {
