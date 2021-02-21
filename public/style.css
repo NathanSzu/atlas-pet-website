@@ -2,8 +2,21 @@ body {
     position: relative;
     background-image: linear-gradient(to bottom right, rgb(75, 75, 75), rgb(144, 144, 144));
     top: 0;
-    bottom: -69px;
-   
+    bottom: -69px;  
+}
+
+button {
+    padding: 0px;
+    margin: 0px;
+    border-style: none;
+}
+button:focus {
+    outline: none;
+}
+
+a:hover {
+    color: unset;
+    text-decoration: none;
 }
 
 .hr {
@@ -475,6 +488,7 @@ pre {
 .nav-link {
     display: inline-block;
     height: 100%;
+    position: relative;
 }
 
 .active-link {
@@ -511,6 +525,7 @@ pre {
 .dropdown {
     position: absolute;
     display: none;
+    top: 100%;
     left: 0px;
     background-color: rgb(95, 95, 95);
     width: 100%;
@@ -518,15 +533,11 @@ pre {
     z-index: 10;
 }
 
-.d-down {
-    position: relative;
-}
-
-.d-down:hover > .dropdown {
+/* .d-down:hover > .dropdown {
     display: block;
     animation-name: dd;
     animation-duration: .25s;
-}
+} */
 
 .links {
     text-align: right;
