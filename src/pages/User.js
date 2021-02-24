@@ -30,16 +30,13 @@ export default function User() {
     const [appButton, setAppButton] = useState("View Applications")
 
     const fullApplication = (e) => {
-        console.log("Target ID: ", e.target.id)
         for (let i = 0; i < applications.length; i++) {
             if (applications[i].uid === e.target.id) {
                 let qAdd = [];
                 let hAdd = [];
                 setFullApp(applications[i])
-                console.log(applications[i].Questions)
                 for (const [value] of Object.entries(applications[i].Questions)) {
                     qAdd.push(value);
-                    console.log(`${value.question}: ${value.response}`);
                 }
                 setQuestions(qAdd)
                 for (const [value] of Object.entries(applications[i].Experience)) {
@@ -67,8 +64,6 @@ export default function User() {
             .get()
             .then((querySnapshot) => {
                 querySnapshot.forEach((doc) => {
-                    console.log(doc.data())
-                    console.log(doc.data().uid)
                     if (doc.data().uid === currentUser.uid) {
                         setIsManager(true)
                         setManagerLocation(doc.data().location)
@@ -96,7 +91,6 @@ export default function User() {
             }
         }
 
-        // console.log(currentUser)
         setJobState({
             all: currentPositions,
             Blaine: currentPositionsBlaine,
@@ -110,18 +104,16 @@ export default function User() {
             .get()
             .then((querySnapshot) => {
                 querySnapshot.forEach((app) => {
-                    console.log(app.data())
                     if (app.data().position.toLowerCase().toString().includes(managerLocation.toLowerCase())) {
                         applicationData.push(app.data())
                     } else if (managerLocation === "All") {
                         applicationData.push(app.data())
-                        console.log(applicationData)
                     }
-                    setApplications(applicationData)
                 })
                 if (applicationData.length === 0) {
                     setApplications([{ position: "No new applications!" }])
                 }
+                setApplications(applicationData)
             })
     }
 
@@ -144,7 +136,6 @@ export default function User() {
     }
 
     const deleteApplication = () => {
-        console.log(fullApp)
         db.collection("deleted-applications").doc(`${fullApp.uid}`).set(fullApp)
             .then(function () {
                 db.collection("applications").doc(`${fullApp.uid}`).delete()
@@ -159,7 +150,6 @@ export default function User() {
             });
     }
 
-    // console.log(managerList)
     return (
         <main className="hide-overflow">
             <Background />
