@@ -10,7 +10,7 @@ export default function ShopInStore({ Helmet }) {
     return (
         <main className="hide-overflow">
             <Helmet>
-                <title>Categories | Atlas Pet</title>
+                <title>Animals & Supplies | Atlas Pet</title>
             </Helmet>
 
             <Background />

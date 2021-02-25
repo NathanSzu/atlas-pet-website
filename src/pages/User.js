@@ -7,6 +7,7 @@ import Application from '../components/Application'
 import { AuthContext } from '../utils/AuthContext';
 import firebase from 'firebase/app';
 import trash from "../utils/Assets/trash.png";
+import { Helmet } from 'react-helmet-async';
 
 export default function User() {
     let currentPositions = [];
@@ -35,14 +36,22 @@ export default function User() {
                 let qAdd = [];
                 let hAdd = [];
                 setFullApp(applications[i])
-                for (const [value] of Object.entries(applications[i].Questions)) {
-                    qAdd.push(value);
+                if (applications[i].Questions) {
+                    console.log(applications[i].Questions)
+                    for (const [value] of Object.entries(applications[i].Questions)) {
+                        qAdd.push(value);
+                    }
+                    setQuestions(qAdd)
+                    console.log(qAdd)
                 }
-                setQuestions(qAdd)
-                for (const [value] of Object.entries(applications[i].Experience)) {
-                    hAdd.push(value);
+                if (applications[i].Experience) {
+                    console.log(applications[i].Experience)
+                    for (const [value] of Object.entries(applications[i].Experience)) {
+                        hAdd.push(value);
+                    }
+                    setWorkHistory(hAdd)
+                    console.log(hAdd)
                 }
-                setWorkHistory(hAdd)
             }
         }
     }
@@ -104,6 +113,8 @@ export default function User() {
             .get()
             .then((querySnapshot) => {
                 querySnapshot.forEach((app) => {
+                    console.log(app.data().position.toLowerCase().toString())
+                    console.log(managerLocation.toLowerCase())
                     if (app.data().position.toLowerCase().toString().includes(managerLocation.toLowerCase())) {
                         applicationData.push(app.data())
                     } else if (managerLocation === "All") {
@@ -152,6 +163,11 @@ export default function User() {
 
     return (
         <main className="hide-overflow">
+
+            <Helmet>
+                <title>User Home | Atlas Pet</title>
+            </Helmet>
+
             <Background />
             <div className="row">
                 <div className="col-md-12 job-section user-page">
