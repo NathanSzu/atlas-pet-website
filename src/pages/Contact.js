@@ -35,7 +35,7 @@ export default function Contact({ Helmet }) {
     };
 
     return (
-        <main className="hide-overflow">
+        <main>
             <Helmet>
                 <title>Contact | Atlas Pet</title>
             </Helmet>

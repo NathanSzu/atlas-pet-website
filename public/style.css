@@ -1,8 +1,14 @@
 body {
     position: relative;
     background-image: linear-gradient(to bottom right, rgb(75, 75, 75), rgb(144, 144, 144));
-    top: 0;
-    bottom: -69px;  
+    /* Hide scrollbar on IE, Edge, & Firefox */
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+}
+
+/* Hide Scrollbar on Chrome */
+body::-webkit-scrollbar {
+   display: none;
 }
 
 button {
@@ -101,10 +107,6 @@ label {
     padding: 20px;
 }
 
-.hide-overflow {
-    overflow: hidden;
-}
-
 @keyframes swoop-in {
     0% {
         position: relative;
@@ -177,13 +179,14 @@ label {
 
 .job-section-overlay {
 position: absolute;
-background-color: rgb(165, 165, 165);
+/* background-color: rgb(165, 165, 165); */
+background-image: linear-gradient(to bottom right, rgb(100, 99, 99), rgb(189, 189, 189));
 top: 0px;
 bottom: 0px;
 left: 0px;
 right: 0px;
 border-radius: 10px;
-opacity: 50%;
+/* opacity: 50%; */
 }
 
 .signup-login {
@@ -613,8 +616,7 @@ pre {
     position: fixed;
     top: 0;
     z-index: -1;
-    background-color: rgb(71, 85, 85);
-    opacity: 75%;
+    background-image: linear-gradient(to bottom right, rgb(71, 85, 85, 1), rgb(255, 255, 255, .1));
 }
 
 .cover-video {
@@ -845,10 +847,6 @@ pre {
 .p-spacing {
     margin-top: 20px;
     line-height: normal;
-}
-
-.category-description {
-    overflow-y: auto;
 }
 
 .product-btn {

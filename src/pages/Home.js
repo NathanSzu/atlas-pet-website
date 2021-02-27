@@ -10,7 +10,7 @@ export default function Home({ Helmet }) {
     const dataset = websiteData.petCategories
 
     return (
-        <main className="hide-overflow">
+        <main>
             <Helmet>
                 <title>Home | Atlas Pet</title>
             </Helmet>

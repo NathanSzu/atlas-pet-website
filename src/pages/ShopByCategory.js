@@ -47,13 +47,12 @@ export default function ShopByCategory({ Helmet }) {
     }
 
     return (
-        <main className="hide-overflow top">
+        <main className="top">
             <Helmet>
                 <title>{category} | Atlas Pet</title>
             </Helmet>
 
             <CategoryNav toggleCategory={toggleCategory} category={category} />
-            <Background />
             <div className="row category-height">
                 <CardSingle src={link} alt={category} />
                 <CategoryJumbotron title={title} description={description} shopOnlineURL={shopOnlineURL} />

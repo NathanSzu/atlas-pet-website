@@ -1,5 +1,4 @@
 import React, { useState, useEffect, useContext } from 'react';
-import Background from '../components/Background.js';
 import jobData from "../utils/JobListings";
 import JobCard from '../components/CardJob.js';
 import FormSignup from '../components/FormSignup.js';
@@ -61,12 +60,11 @@ export default function Careers({ Helmet }) {
     }
 
     return (currentUser ? <Redirect to="User-Page" /> :
-        <main className="hide-overflow">
+        <main>
             <Helmet>
                 <title>Careers | Atlas Pet</title>
             </Helmet>
 
-            <Background />
             <div className="row">
                 <div className="col-md-6 job-section hide-on-small">
                     <div className="job-section-overlay"></div>

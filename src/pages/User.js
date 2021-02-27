@@ -1,6 +1,5 @@
 import React, { useState, useEffect, useContext } from 'react';
-import Background from '../components/Background';
-import jobData from "../utils/JobListings"
+import jobData from "../utils/JobListings";
 import JobCard from '../components/CardJob';
 import app from '../utils/firebase';
 import Application from '../components/Application'
@@ -26,7 +25,8 @@ export default function User() {
     const [fullApp, setFullApp] = useState(null);
     const [questions, setQuestions] = useState([]);
     const [workHistory, setWorkHistory] = useState([]);
-    // const [editUser, setEditUser] = useState(false);
+    const [questionCount, setQuestionCount] = useState(null);
+    const [workHistoryCount, setWorkHistoryCount] = useState(null);
     const [applicationView, setApplicationView] = useState(false);
     const [appButton, setAppButton] = useState("View Applications")
 
@@ -37,20 +37,20 @@ export default function User() {
                 let hAdd = [];
                 setFullApp(applications[i])
                 if (applications[i].Questions) {
-                    console.log(applications[i].Questions)
+
+                    // Creates an array of object keys to loop through when populating the page. This allows for scalability when adding questions.
                     for (const [value] of Object.entries(applications[i].Questions)) {
                         qAdd.push(value);
                     }
-                    setQuestions(qAdd)
-                    console.log(qAdd)
+                    setQuestions(applications[i].Questions)
+                    setQuestionCount(qAdd)
                 }
                 if (applications[i].Experience) {
-                    console.log(applications[i].Experience)
                     for (const [value] of Object.entries(applications[i].Experience)) {
                         hAdd.push(value);
                     }
-                    setWorkHistory(hAdd)
-                    console.log(hAdd)
+                    setWorkHistory(applications[i].Experience)
+                    setWorkHistoryCount(hAdd)
                 }
             }
         }
@@ -113,8 +113,6 @@ export default function User() {
             .get()
             .then((querySnapshot) => {
                 querySnapshot.forEach((app) => {
-                    console.log(app.data().position.toLowerCase().toString())
-                    console.log(managerLocation.toLowerCase())
                     if (app.data().position.toLowerCase().toString().includes(managerLocation.toLowerCase())) {
                         applicationData.push(app.data())
                     } else if (managerLocation === "All") {
@@ -162,13 +160,12 @@ export default function User() {
     }
 
     return (
-        <main className="hide-overflow">
+        <main>
 
             <Helmet>
                 <title>User Home | Atlas Pet</title>
             </Helmet>
 
-            <Background />
             <div className="row">
                 <div className="col-md-12 job-section user-page">
                     <div className="job-section-overlay"></div>
@@ -222,23 +219,23 @@ export default function User() {
                                             </div>
 
                                             <p className="app-info-bold text-center">Work History</p>
-                                            {workHistory.map((data, id) => (
+                                            {workHistoryCount ? workHistoryCount.map((data, id) => (
                                                 <div key={id}>
-                                                    <p className="app-info-display"><span className="app-info-bold">Title:</span> {data.title}</p>
-                                                    <p className="app-info-display"><span className="app-info-bold">Dates:</span> {data.start} - {data.end}</p>
-                                                    <p className="app-info-display"><span className="app-info-bold">Company:</span> {data.company}</p>
+                                                    <p className="app-info-display"><span className="app-info-bold">Title:</span> {workHistory[data].title}</p>
+                                                    <p className="app-info-display"><span className="app-info-bold">Dates:</span> {workHistory[data].start} - {workHistory[data].end ? workHistory[data].end : 'current'}</p>
+                                                    <p className="app-info-display"><span className="app-info-bold">Company:</span> {workHistory[data].company}</p>
                                                     <pre className="app-info-display">{data.description}</pre>
                                                     <br />
                                                 </div>
-                                            ))}
+                                            )) : null }
                                             <br />
                                             <p className="app-info-bold text-center">Application Questions</p>
-                                            {questions.map((question, id) => (
+                                            {questionCount ? questionCount.map((data, id) => (
                                                 <div key={id}>
-                                                    <p className="app-info-display"><span className="app-info-bold">{question.question}</span></p>
-                                                    <pre>{question.response}</pre>
+                                                    <p className="app-info-display"><span className="app-info-bold">{questions[data].question}</span></p>
+                                                    <pre>{questions[data].response}</pre>
                                                 </div>
-                                            ))}
+                                            )) : null }
 
 
                                         </div> : null}
@@ -266,6 +263,7 @@ export default function User() {
                                                     <JobCard
                                                         job={job}
                                                     />
+                                                    {/* Sets the application view to open with the correct position title and location. */}
                                                     <div className="job-overlay" onClick={(e) => { setApply(true); setPosition(e.target.id) }} id={job.title + ": " + job.location}></div>
                                                 </div>
                                             ))}
